@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원정보 수정</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/fonts.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+    
+    <style>
+        /* mypage와 같음 */
+        .mypage__wrap {
+            width: 1200px;
+            margin: 88px auto;
+        }
+        .mypage__wrap h3 {
+            padding-top: 50px;
+            font-size: 30px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .mypage__info {
+            width: 100%;
+            border: 1px solid #5066B0;
+            border-radius: 10px;
+            padding: 50px 30px;
+        }
+        .mypage__info .title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+
+
+
+
+
+        /* 추가되는거1 */
+        .mypage__info .boxL {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        .mypage__info .boxL .img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: #fff;
+            border: 5px solid #96B1FF;
+            overflow: hidden;
+        }
+        .mypage__info .boxL .img img {
+            width: 300px;
+        }
+        .mypage__info .info {
+            background: #e7edff;
+        }
+        .mypage__info .signup__box {
+            margin: 0 auto;
+        }
+        .mypage__info input,
+        .mypage__info select {
+            margin-bottom: 10px !important;
+        }
+        .mypage__info label {
+            margin-bottom: 5px !important;
+        }
+        .mypage__info .mypage__btn {
+            padding: 0 20px;
+            width: 100%;
+            height: 45px;
+            border: 1px solid #5066B0;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-top: 20px;
+            background: #5066B0;
+            color: #fff;
+            cursor: pointer;
+        }
+        .mypage__info .file {
+            height: 30px;
+            padding: 5px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid #5066B0;
+            border-radius: 10px;
+            font-size: 20px;
+            background: #5066B0;
+            color: #fff;
+            cursor: pointer;
+            margin-bottom: 20px !important;
+        }
+        .mypage__info .mypage__btn:hover,
+        .mypage__info .file:hover {
+            background: #fff;
+            color: #5066B0;
+            box-shadow: 0 0 0 2px #5066B0;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="header container">
+            <h1 class="logo"><a href="#"><img src="../assets/img/header/logo.svg" alt="로고이미지"></a></h1>
+            <nav class="menu">
+                <h2 class="ir_so">메인 메뉴</h2>
+                <ul>
+                    <li><a href="#">개인</a></li>
+                    <li><a href="#">리뷰</a></li>
+                    <li><a href="#">꿀팁</a></li>
+                    <li><a href="#">고민</a></li>
+                </ul>
+            </nav>
+            <div class="member">
+                <span class="ir_so">회원 정보 영역</span>
+                <a href="#" class="signin_btn">sign in</a>
+                <a href="#" class="signup_btn">sign up</a>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <div class="mypage__wrap">
+            <h3>회원정보 수정</h3>
+            <div class="mypage__info">
+                <div class="signup__box info">
+                    <form action="join2Save.php" name="signup__info1" id="signup__info1" method="post">
+                        <fieldset>
+                            <legend class="ir_so">회원정보 수정 입력폼</legend>
+                            <div class="boxL">
+                                <div class="img">
+                                    <img src="./assets/img/face.svg" alt="사진">
+                                </div>
+                            </div>
+
+                            <label class="file" for="youPhoto">사진 변경하기</label>
+                            <input type="file" name="youPhoto" id="youPhoto" style="display: none;">
+
+                            <label for="youIntro">자기소개</label>
+                            <input type="text" name="youIntro" id="youIntro" class="info1Input" value="자기소개 입니다 자기소개 입니다 자기소개 입니다 자기소개 입니다 자기소개 입니다" required>
+
+                            <label for="youEmail">이메일</label>
+                            <input type="email" name="youEmail" id="youEmail" class="info1Input" value="abc123@naver.com" required>
+    
+                            <label for="youName">이름</label>
+                            <input type="text" name="youName" id="youName" class="info1Input" value="홍길동" required>
+    
+                            <label for="youBirth">생년월일</label>
+                            <input type="text" name="youBirth" id="youBirth" class="info1Input" value="2020.02.02" required>
+                            
+                            <label for="youGender">성별</label>
+                            <select name="youGender" id="youGender">
+                                <option value="남자">남자</option>
+                                <option value="여자">여자</option>
+                            </select>
+    
+                            <label for="youPhone">핸드폰 번호</label>
+                            <input type="text" name="youPhone" id="youPhone" class="info1Input dd" value="010-0000-0000" required>
+
+                            <button class="mypage__btn">변경하기</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </main>
+    <footer id="footer">
+        <div class="footer__top">
+            <div class="footer__top__wrap container">
+                <h1 class="logo"><a href="#"><img src="../assets/img/header/logo.svg" alt="로고이미지"></a></h1>
+                <div class="contect">
+                    <span>contect</span>
+                    <div class="contect_phone">
+                        <img src="../assets/img/footer/phone.svg" alt="전화">
+                        <p>010-0000-0000</p>
+                    </div>
+                    <div class="contect_email">
+                        <img src="../assets/img/footer/email.svg" alt="이메일">
+                        <p>abc123@naver.com</p>
+                    </div>
+                </div>
+                <div class="github">
+                    <img src="../assets/img/footer/github.svg" alt="깃헙">
+                    <span>github</span>
+                    <p>https://github.com/ohwehoh</p>
+                    <p>https://github.com/HeebongYu</p>
+                    <p>https://github.com/jiseonpack</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom container">
+            <a href="#">프로젝트 소개</a>
+            <span> | </span>
+            <a href="#">고객의 소리</a>
+            <span> | </span>
+            <a href="#">광고 문의</a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,396 @@
+body {
+    background-color: #fff;
+}
+
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#header {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border-bottom: 2px solid #7494EA;
+}
+
+.header {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.menu {
+    width: 590px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.member {
+}
+
+.member a {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+}
+
+.signin_btn {
+    background-color: #5066B0;
+    border: 1px solid #7291EA;
+}
+.signup_btn {
+    background-color: #96B1FF;
+    border: 1px solid #7291EA;
+}
+/* //header */
+
+/* main */
+#main {
+    width: 100%;
+    min-height: 800px;
+    /* background: #eee; */
+}
+#section {
+    padding-top: 88px;
+    padding-bottom: 88px;
+}
+
+/* signup */
+.signup, .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.signup__step {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.signup__step span {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #5066B0;
+    background-color: #fff;
+    position: relative;
+}
+
+.signup__step span strong {
+    text-align: center;
+    line-height: 28px;
+}
+.signup__step span:nth-child(2),
+.signup__step span:nth-child(3) {
+    margin-left: 10px;
+}
+
+.signup__step span:nth-child(2)::before,
+.signup__step span:nth-child(3)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    top: 50%;
+    left: -15px;
+    height: 1px;
+    border-top: 1px solid #5066B0;
+}
+.signup__step span.on, 
+.signup__step span.finish {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #5066B0;
+    background-color: #5066B0;
+}
+.signup__step span.on strong {
+    color: #fff;
+}
+
+.signup__step span.finish img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+
+}
+.signup__box {
+    border: 1px solid #5066B0;
+    border-radius: 10px;
+    width: 552px;
+    text-align: left;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.signup__box form .sAll {
+    margin-bottom: 30px;
+}
+
+.signup__box form label {
+    font-size: 20px;
+}
+
+.signup__box form a img {
+    width: 20px;
+    height: 20px;
+}
+
+.signup__box form label.signup__agreeAll {
+    font-weight: 700;
+}
+
+.signup__box form .signup__agree1__text {
+    padding: 10px 14px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 492px;
+    height: 72px;
+    border: 1px solid #C9D7FF;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.signup__box form .signup__agree1__text::-webkit-scrollbar{ display:none; }
+
+.signup__box.info {
+    padding: 30px 60px;
+}
+
+.signup__box.info label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.signup__box.info input {
+    padding: 0 20px;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #5066B0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.signup__box.info input.check {
+    width: 68%;
+}
+
+.signup__box.info a.test {
+    display: inline-block;
+    width: 28%;
+    height: 45px;
+    border-radius: 10px;
+    background: #5066B0;
+    color: #fff;
+    vertical-align: top;
+    text-align: center;
+    line-height: 45px;
+}
+
+.signup__box.info select {
+    padding: 0 20px;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #5066B0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.signup__btn__wrap a {
+    display: inline-block;
+}
+.signup__btn {
+    width: 320px;
+    height: 53px;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.signup__btn.next {
+    background-color: #5066B0;
+    color: #fff;
+}
+
+.signup__btn.prev {
+    background-color: #E5E5E5;
+    color: #000;
+}
+
+.signup__ex {
+    font-size: 20px;
+    width: 334px;
+    word-break: keep-all;
+    margin-bottom: 30px;
+}
+
+.signup__ex .top {
+    margin-bottom: 20px;
+}
+
+/* //signup */
+
+/* login, findID, findPW */
+.login__box {
+    border: 1px solid #5066B0;
+    border-radius: 10px;
+    width: 552px;
+    padding: 88px 30px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__box input {
+    text-align: left;
+    width: 400px;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    background-color: #C9D7FF;
+    font-size: 20px;
+}
+
+.login__box input::placeholder {
+    color: #fff;
+    text-align: left;
+}
+
+.login__box .btn {
+    margin-top: 10px;
+    width: 400px;
+    height: 85px;
+    background-color: #8DA9FA;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login__box .wrap {
+    margin-top: 20px;
+}
+
+.login__box .wrap a {
+    text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+/* //login */
+
+/* //main */
+
+/* footer */
+#footer {
+    width: 100%;
+    height: 330px;
+    background-color: #fff;
+}
+
+.footer__top {
+    width: 100%;
+    border-bottom: 2px solid #7494EA;
+}
+
+.footer__top__wrap {
+    height: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__top__wrap .logo {
+    margin-right: 60px;
+}
+
+.footer__top__wrap p {
+    font-size: 12px;
+}
+
+.footer__top__wrap span {
+    font-size: 17px;
+    color: #5066B0;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer__top__wrap .contect {
+    text-align: center;
+}
+
+.footer__top__wrap .contect span {
+    margin-bottom: 15px;
+}
+
+.footer__top__wrap .contect div {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__top__wrap .contect div:last-child{
+    margin-top: 10px;
+}
+
+.footer__top__wrap .contect img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.footer__top__wrap .contect p {
+    line-height: 20px;
+}
+
+.footer__top__wrap .github {
+    text-align: center;
+}
+
+.footer__top__wrap .github img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer__top__wrap .github span {
+    line-height: 30px;
+}
+
+.footer__top__wrap .github p {
+    margin-bottom: 10px;
+}
+.footer__top__wrap .github p:last-child {
+    margin-bottom: 0;
+}
+
+.footer__bottom {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.footer__bottom span {
+    padding: 0 5px;
+    color: #5066B0;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맞춤정보 수정</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/fonts.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+    
+    <style>
+        /* mypage와 같음 */
+        .mypage__wrap {
+            width: 1200px;
+            margin: 88px auto;
+        }
+        .mypage__wrap h3 {
+            padding-top: 50px;
+            font-size: 30px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .mypage__info {
+            width: 100%;
+            border: 1px solid #5066B0;
+            border-radius: 10px;
+            padding: 50px 30px;
+        }
+        .mypage__info .title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+
+        /* mypageMember와 같음 */
+        .mypage__info .info {
+            background: #e7edff;
+        }
+        .mypage__info .signup__box {
+            margin: 0 auto;
+        }
+        .mypage__info input,
+        .mypage__info select {
+            margin-bottom: 10px !important;
+        }
+        .mypage__info label {
+            margin-bottom: 5px !important;
+        }
+        .mypage__info .mypage__btn {
+            padding: 0 20px;
+            width: 100%;
+            height: 45px;
+            border: 1px solid #5066B0;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-top: 20px;
+            background: #5066B0;
+            color: #fff;
+            cursor: pointer;
+        }
+        .mypage__info .mypage__btn:hover {
+            background: #fff;
+            color: #5066B0;
+            box-shadow: 0 0 0 2px #5066B0;
+        }
+
+        /* 추가되는거 없음 */
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="header container">
+            <h1 class="logo"><a href="#"><img src="../assets/img/header/logo.svg" alt="로고이미지"></a></h1>
+            <nav class="menu">
+                <h2 class="ir_so">메인 메뉴</h2>
+                <ul>
+                    <li><a href="#">개인</a></li>
+                    <li><a href="#">리뷰</a></li>
+                    <li><a href="#">꿀팁</a></li>
+                    <li><a href="#">고민</a></li>
+                </ul>
+            </nav>
+            <div class="member">
+                <span class="ir_so">회원 정보 영역</span>
+                <a href="#" class="signin_btn">sign in</a>
+                <a href="#" class="signup_btn">sign up</a>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <div class="mypage__wrap">
+            <h3>맞춤정보 수정</h3>
+            <div class="mypage__info">
+                <div class="signup__box info">
+                    <form action="info2Save.php" name="signup__info2" id="signup__info2"method="post">
+                        <fieldset>
+                            <legend class="ir_so">맞춤정보 수정 입력폼</legend>
+                            <label for="skinType">피부타입이 무엇인가요?</label>
+                            <select name="skinType" id="skinType">
+                                <option value="건성">건성</option>
+                                <option value="지성">지성</option>
+                                <option value="복합성">복합성</option>
+                            </select>
+                            <label for="skinTone">피부톤이 무엇인가요?</label>
+                            <select name="skinTone" id="skinTone">
+                                <option value="웜톤">웜톤</option>
+                                <option value="쿨톤">쿨톤</option>
+                            </select>
+                            <label for="skinWorry">피부고민이 무엇인가요?</label>
+                            <select name="skinWorry" id="skinWorry">
+                                <option value="여드름">여드름</option>
+                                <option value="건조함">건조함</option>
+                                <option value="홍조">홍조</option>
+                                <option value="잡티">잡티</option>
+                                <option value="흉터">흉터</option>
+                            </select>
+                            <label for="hairType">헤어타입이 무엇인가요?</label>
+                            <select name="hairType" id="hairType">
+                                <option value="직모">직모</option>
+                                <option value="곱슬">곱슬</option>
+                                <option value="복합성">복합성</option>
+                            </select>
+                            <label for="hairWorry">헤어고민이 무엇인가요?</label>
+                            <select name="hairWorry" id="hairWorry">
+                                <option value="스타일링">스타일링</option>
+                                <option value="건조함">건조함</option>
+                                <option value="기름짐">기름짐</option>
+                                <option value="탈모">탈모</option>
+                                <option value="두피관리">두피관리</option>
+                            </select>
+                            <label for="freeText">원하는 정보나 고민을 자유롭게 입력하세요!</label>
+                            <input type="text" name="freeText" id="freeText" class="info2Input" value="원하는정보 원하는정보2 기타고민 기타고민2">
+
+                            <button class="mypage__btn">변경하기</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </main>
+    <footer id="footer">
+        <div class="footer__top">
+            <div class="footer__top__wrap container">
+                <h1 class="logo"><a href="#"><img src="../assets/img/header/logo.svg" alt="로고이미지"></a></h1>
+                <div class="contect">
+                    <span>contect</span>
+                    <div class="contect_phone">
+                        <img src="../assets/img/footer/phone.svg" alt="전화">
+                        <p>010-0000-0000</p>
+                    </div>
+                    <div class="contect_email">
+                        <img src="../assets/img/footer/email.svg" alt="이메일">
+                        <p>abc123@naver.com</p>
+                    </div>
+                </div>
+                <div class="github">
+                    <img src="../assets/img/footer/github.svg" alt="깃헙">
+                    <span>github</span>
+                    <p>https://github.com/ohwehoh</p>
+                    <p>https://github.com/HeebongYu</p>
+                    <p>https://github.com/jiseonpack</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom container">
+            <a href="#">프로젝트 소개</a>
+            <span> | </span>
+            <a href="#">고객의 소리</a>
+            <span> | </span>
+            <a href="#">광고 문의</a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
